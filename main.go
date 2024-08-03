@@ -1,16 +1,18 @@
 package main
 
 import (
+	"encoding/json"
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 	"path/filepath"
 )
 
 type Project struct {
-	Name        string
-	Description string
-	URL         string
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	URL         string `json:"url"`
 }
 
 func main() {
@@ -18,8 +20,14 @@ func main() {
 	http.HandleFunc("/projects", projectsHandler)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
-	log.Println("Starting server on :8080")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	// Get the port from the environment variable
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // Default to port 8080 if PORT environment variable is not set
+	}
+
+	log.Printf("Starting server on :%s\n", port)
+	if err := http.ListenAndServe(":"+port, nil); err != nil {
 		log.Fatalf("could not start server: %s\n", err.Error())
 	}
 }
@@ -57,10 +65,14 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error parsing template: %s\n", err.Error())
 		return
 	}
-	projects := []Project{
-		{Name: "Project One", Description: "Description of project one", URL: "#"},
-		{Name: "Project Two", Description: "Description of project two", URL: "#"},
+
+	projects, err := loadProjects("projects.json")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Printf("Error loading projects: %s\n", err.Error())
+		return
 	}
+
 	data := struct {
 		Title    string
 		Projects []Project
@@ -68,8 +80,23 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 		Title:    "Projects Page",
 		Projects: projects,
 	}
+
 	if err := tmpl.ExecuteTemplate(w, "base.html", data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		log.Printf("Error executing template: %s\n", err.Error())
 	}
+}
+
+func loadProjects(filename string) ([]Project, error) {
+	file, err := os.Open(filename)
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
+
+	var projects []Project
+	if err := json.NewDecoder(file).Decode(&projects); err != nil {
+		return nil, err
+	}
+	return projects, nil
 }
