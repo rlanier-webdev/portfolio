@@ -1,0 +1,12 @@
+{{ define "content" }}
+<h2>Projects</h2>
+<ul>
+    {{ range .Projects }}
+    <li>
+        <h3>{{ .Name }}</h3>
+        <p>{{ .Description }}</p>
+        <a href="{{ .URL }}">View Project</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
