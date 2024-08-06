@@ -11,6 +11,7 @@ import (
 
 type Project struct {
 	Name        string `json:"name"`
+	Stack        string `json:"stack"`
 	Description string `json:"description"`
 	URL         string `json:"url"`
 }

@@ -1,12 +1,13 @@
 {{ define "content" }}
 <h2>Projects</h2>
-<ul>
+<div class="project-container">
     {{ range .Projects }}
-    <li>
+    <div class="projects">
         <h3>{{ .Name }}</h3>
+        <p>Made with:<span class="stack"> {{ .Stack }}</span></p>
         <p>{{ .Description }}</p>
-        <a href="{{ .URL }}" target="_blank">View Project</a>
-    </li>
+        <a class="btn" href="{{ .URL }}" target="_blank">View Project</a>
+    </div>
     {{ end }}
-</ul>
+</div>
 {{ end }}

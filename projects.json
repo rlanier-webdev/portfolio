@@ -1,11 +1,13 @@
 [
      {
          "Name": "Password Generator Web Service",
-         "Description": "This project is a web application built using the Gin framework in Go, designed to generate and serve random passwords. Key features and components of the project include:",
+         "Stack": "Golang",
+         "Description": "This project is a web application built using the Gin framework in Go, designed to generate and serve random passwords.",
          "URL": "https://github.com/rlanier-webdev/pwgenerator"
      },
      {
          "Name": "City Poly Rivarly API",
+         "Stack": "Golang",
          "Description": "This API provides endpoints to retrieve information about the historic City-Poly game.",
          "URL": "https://github.com/rlanier-webdev/RivalryAPIv2"
      }

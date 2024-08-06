@@ -1,22 +1,56 @@
 body {
-     font-family: Arial, sans-serif;
-     margin: 0;
-     padding: 0;
- }
- 
- header {
-     background-color: #333;
-     color: #fff;
-     padding: 1em;
- }
- 
- header nav a {
-     color: #fff;
-     margin: 0 1em;
-     text-decoration: none;
- }
- 
- main {
-     padding: 2em;
- }
- 
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 1em 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1.logo {
+    font-size: 1.5rem;
+}
+
+header nav a {
+    margin: 0 1em;
+    text-decoration: none;
+    font-size: 1.0rem;
+}
+
+main {
+    padding: 3em 5em;
+}
+ul {
+    list-style: none;
+}
+.stack {
+    font-weight: bold;
+    color: rgb(59, 135, 235);
+}
+a.btn {
+    border: 1px solid #eeeeee;
+    color: #f5f5f5;
+    text-decoration: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: .9rem;
+}
+a.btn:hover {
+    border: 1px solid #dad1d1;
+}
+.project-container {
+    display: flex;
+    column-gap: 2rem;
+}
+.projects {
+    background-color: #131313;
+    padding: 25px;
+    width: 400px;
+    height: 225px;
+    color: #fff;
+    border-radius: 5px;
+}
