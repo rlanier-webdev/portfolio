@@ -13,6 +13,7 @@ header {
     align-items: center;
     background-color: #fff;
     column-gap: 30px;
+    padding: 3em 8em;
 }
 header nav a {
     margin: 0 1em;
@@ -20,11 +21,12 @@ header nav a {
     font-size: 1.0rem;
 }
 h1.brand-text {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     line-height: 0;
 }
 h2.brand-text {
-    font-size: 1rem;
+    font-size: 1.4rem;
+    color: #797979;
 }
 div.btn-group {
     margin-left: auto;
@@ -33,10 +35,7 @@ main {
     padding: 3em 8em;
     display: flex;
     flex-direction: row;
-    gap: 35px;
-}
-main div.left, main div.right {
-    
+    gap: 100px;
 }
 main div.left {
     width: 70%;
@@ -49,16 +48,23 @@ section.about {
     color: #eeeeee;
     padding: 15px;
 }
-section.projects {
-    padding: 15px;
+section.about p {
+    line-height: 1.5;
 }
 section.contact, section.skills, section.courses, section.projects {
     background-color: #eeeeee;
     height: auto;
     margin-bottom: 64px;
     padding: 15px;
-
 }
+svg {
+    padding-right: 8px;
+    color: #131313;
+}
+svg:hover {
+    color:#131313c7;
+}
+
 .project {
     padding: 10px;
 }
