@@ -18,7 +18,6 @@ type Project struct {
 
 func main() {
 	http.HandleFunc("/", homeHandler)
-	http.HandleFunc("/projects", projectsHandler)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 	// Get the port from the environment variable
@@ -48,40 +47,19 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error parsing template: %s\n", err.Error())
 		return
 	}
-	data := struct {
-		Title string
-	}{
-		Title: "Home Page",
-	}
-	if err := tmpl.ExecuteTemplate(w, "base.html", data); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		log.Printf("Error executing template: %s\n", err.Error())
-	}
-}
-
-func projectsHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := parseTemplateFiles("base.html", "project.html")
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		log.Printf("Error parsing template: %s\n", err.Error())
-		return
-	}
-
 	projects, err := loadProjects("projects.json")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		log.Printf("Error loading projects: %s\n", err.Error())
 		return
 	}
-
 	data := struct {
-		Title    string
+		Title string
 		Projects []Project
 	}{
-		Title:    "Projects Page",
+		Title: "Home Page",
 		Projects: projects,
 	}
-
 	if err := tmpl.ExecuteTemplate(w, "base.html", data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		log.Printf("Error executing template: %s\n", err.Error())

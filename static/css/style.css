@@ -3,54 +3,77 @@ body {
     font-size: 18px;
     margin: 0;
     padding: 0;
+    background-color: #131313;
 }
 
 header {
     padding: 1em 5em;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    background-color: #fff;
+    column-gap: 30px;
 }
-header h1.logo {
-    font-size: 1.5rem;
-}
-
 header nav a {
     margin: 0 1em;
     text-decoration: none;
     font-size: 1.0rem;
 }
-
+h1.brand-text {
+    font-size: 1.3rem;
+    line-height: 0;
+}
+h2.brand-text {
+    font-size: 1rem;
+}
+div.btn-group {
+    margin-left: auto;
+}
 main {
-    padding: 3em 5em;
+    padding: 3em 8em;
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
 }
-ul {
-    list-style: none;
+main div.left, main div.right {
+    
 }
-.stack {
-    font-weight: bold;
-    color: rgb(59, 135, 235);
+main div.left {
+    width: 70%;
 }
-a.btn {
+main div.right {
+    width: 30%;
+}
+section.about {
+    height: auto;
+    color: #eeeeee;
+    padding: 15px;
+}
+section.projects {
+    padding: 15px;
+}
+section.contact, section.skills, section.courses, section.projects {
+    background-color: #eeeeee;
+    height: auto;
+    margin-bottom: 64px;
+    padding: 15px;
+
+}
+.project {
+    padding: 10px;
+}
+a.btn, button {
     border: 1px solid #eeeeee;
-    color: #f5f5f5;
+    color: #1a1a1a;
     text-decoration: none;
     padding: 7px 10px;
     border-radius: 5px;
     font-size: .9rem;
+    background-color: #cacaca;
 }
-a.btn:hover {
+a.btn:hover, button:hover {
     border: 1px solid #dad1d1;
 }
-.project-container {
-    display: flex;
-    column-gap: 2rem;
-}
-.projects {
-    background-color: #131313;
-    padding: 25px;
-    width: 400px;
-    height: 225px;
-    color: #fff;
-    border-radius: 5px;
+button{
+    cursor: pointer;
 }
