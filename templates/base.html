@@ -9,56 +9,30 @@
 </head>
 <body>
     <header>
-        <div>
-            <img src="https://elouwerse.nl/placecircle/125" alt="">
+        <div class="logo-container">
+            <img class="logo" src="/static/img/headshot.png" alt="">
         </div>
         <div class="brand">
             <h1 class="brand-text">RaShunda Williams</h1>
             <h2 class="brand-text">Web Developer</h2>
         </div>
         <div class="btn-group">
-            <a href="https://www.linkedin.com/in/rashundalanierwilliams/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
-            <i class="fa-brands fa-github fa-2xl"></i>
-            <i class="fa-brands fa-dev fa-2xl"></i>
+            <a href="https://www.linkedin.com/in/rashundalanierwilliams/" target="_blank">
+                <i class="fa-brands fa-linkedin-in fa-2xl"></i>
+            </a>
+            <a href="https://github.com/rlanier-webdev" target="_blank">
+                <i class="fa-brands fa-github fa-2xl"></i>
+            </a>
+            <a href="https://dev.to/thrtn85dev" target="_blank">
+                <i class="fa-brands fa-dev fa-2xl"></i>
+            </a>
         </div>
     </header>
     <main>
-        <div class="left">
-            <section class="about">
-                <h2>About Me</h2>
-                <p>As a customer support specialist transitioning to development, I'm passionate about using technology to address real-world problems. I have a solid foundation in HTML, CSS, and JavaScript, along with experience in Python and Django, and I'm dedicated to creating impactful web applications. I've also explored low and no-code tools to improve development efficiency. Currently, I'm expanding my skills with Go and thrive on continuous learning and pushing my capabilities.</p>
-                <!-- {{ block "content" . }}{{ end }} -->
-            </section>
-    
-            <section class="projects">
-                <h2>Recent Projects</h2>
-                {{ range .Projects }}
-                <div class="project">
-                    <h3>{{ .Name }}</h3>
-                    <p>Made with:<span class="stack"> {{ .Stack }}</span></p>
-                    <p>{{ .Description }}</p>
-                    <a class="btn" href="{{ .URL }}" target="_blank">View Project</a>
-                </div>
-                {{ end }}
-            </section>
-        </div>
-
-        <div class="right">
-            <section class="contact">
-                <p><i class="fa-solid fa-location-dot"></i>Saint Louis, MO</p>
-                <p><i class="fa-solid fa-envelope"></i>rashundalanier@gmail.com</p>
-                <p><i class="fa-solid fa-file-pdf"></i>Download Resume</p>
-            </section>
-
-            <section class="skills">
-                <h2>Skills</h2>
-
-            </section>
-
-            <section class="courses">
-                <h2>Courses & Certificates</h2>
-            </section>
-        </div>
+        {{block "content" .}}{{end}}
     </main>
+    <footer>
+        <p>2024 RaShunda Williams</p>
+    </footer>
 </body>
 </html>

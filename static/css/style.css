@@ -27,15 +27,39 @@ h1.brand-text {
 h2.brand-text {
     font-size: 1.4rem;
     color: #797979;
+    font-weight: 300;
 }
 div.btn-group {
     margin-left: auto;
+    display: flex;
+    gap: 16px;
 }
+div.btn-group a{
+    text-decoration: none;
+}
+div.logo-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+img.logo {
+    width: 100%;
+    height: auto;
+}
+svg {
+    color: #131313;
+}
+svg:hover {
+    color: #131313c2;
+}
+
 main {
     padding: 3em 8em;
     display: flex;
     flex-direction: row;
     gap: 100px;
+    padding-bottom: 0;
 }
 main div.left {
     width: 70%;
@@ -43,43 +67,56 @@ main div.left {
 main div.right {
     width: 30%;
 }
-section.about {
-    height: auto;
-    color: #eeeeee;
-    padding: 15px;
-}
 section.about p {
     line-height: 1.5;
 }
-section.contact, section.skills, section.courses, section.projects {
+section.about, section.contact, section.skills, section.courses, section.projects {
     background-color: #eeeeee;
     height: auto;
     margin-bottom: 64px;
-    padding: 15px;
+    padding: 30px 20px;
 }
-svg {
+section.contact p svg {
     padding-right: 8px;
-    color: #131313;
 }
-svg:hover {
-    color:#131313c7;
+div.skill-container {
+    display: flex;
+    flex-wrap: wrap;
 }
-
-.project {
+div.skill-container svg {
     padding: 10px;
+    flex-basis: 25%;
+}
+div.project {
+    padding-bottom: 40px;
 }
 a.btn, button {
     border: 1px solid #eeeeee;
-    color: #1a1a1a;
+    color: #eeeeee;
     text-decoration: none;
     padding: 7px 10px;
     border-radius: 5px;
     font-size: .9rem;
-    background-color: #cacaca;
+    background-color: #131313;
 }
 a.btn:hover, button:hover {
-    border: 1px solid #dad1d1;
+    border: 1px solid #131313c2;
 }
 button{
     cursor: pointer;
+}
+.course {
+    padding: 5px;
+}
+.course img {
+    width: 75px;
+    height: auto;
+}
+.course p a {
+    text-decoration: none;
+    color: #131313;
+}
+footer {
+    text-align: center;
+    color: #eeeeee;
 }
