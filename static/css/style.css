@@ -141,6 +141,21 @@ footer {
     main div.right {
         width: 100%;
     }
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    div.btn-group {
+        margin-left: 0;
+    }
+    h1.brand-text {
+        font-size: 1.6rem;
+        width: 300px;
+        text-align: center;
+    }
+    h2.brand-text {
+        text-align: center;
+    }
 }
 
 /* Mobile devices */
