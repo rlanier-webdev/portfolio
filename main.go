@@ -57,7 +57,7 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 		Title string
 		Projects []Project
 	}{
-		Title: "Home Page",
+		Title: "RaShunda Williams Dev Portfolio | Remote",
 		Projects: projects,
 	}
 	if err := tmpl.ExecuteTemplate(w, "base.html", data); err != nil {
