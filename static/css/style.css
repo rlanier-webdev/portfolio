@@ -89,6 +89,25 @@ div.skill-container svg {
 }
 div.project {
     padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+div.project div.project-img {
+    width: 200px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+}
+div.project div.project-img img {
+    width: 200px;
+    height: auto;
+}
+div.project div.project-img .svg-image {
+    min-width: 50%;
+    width: 85%;
 }
 a.btn, button {
     border: 1px solid #eeeeee;

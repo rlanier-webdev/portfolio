@@ -11,9 +11,10 @@ import (
 
 type Project struct {
 	Name        string `json:"name"`
-	Stack        string `json:"stack"`
+	Stack       string `json:"stack"`
 	Description string `json:"description"`
 	URL         string `json:"url"`
+	ImagePath   string `json:"image"`
 }
 
 func main() {
@@ -31,13 +32,23 @@ func main() {
 		log.Fatalf("could not start server: %s\n", err.Error())
 	}
 }
+// Custom function to extract the file extension
+func ext(path string) string {
+	return filepath.Ext(path)
+}
 
 func parseTemplateFiles(filenames ...string) (*template.Template, error) {
+	// Create a FuncMap with your custom function
+	funcMap := template.FuncMap{
+		"ext": ext,
+	}
+
 	paths := make([]string, len(filenames))
 	for i, file := range filenames {
 		paths[i] = filepath.Join("templates", file)
 	}
-	return template.ParseFiles(paths...)
+	// Parse the templates and apply the FuncMap
+	return template.New("").Funcs(funcMap).ParseFiles(paths...)
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
@@ -54,10 +65,10 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	data := struct {
-		Title string
+		Title    string
 		Projects []Project
 	}{
-		Title: "RaShunda Williams Dev Portfolio | Remote",
+		Title:    "RaShunda Williams Dev Portfolio | Remote",
 		Projects: projects,
 	}
 	if err := tmpl.ExecuteTemplate(w, "base.html", data); err != nil {

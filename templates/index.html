@@ -9,10 +9,19 @@
           <h2>Recent Projects</h2>
           {{ range .Projects }}
           <div class="project">
-               <h3>{{ .Name }}</h3>
-               <p>Made with:<span class="stack"> {{ .Stack }}</span></p>
-               <p>{{ .Description }}</p>
-               <a class="btn" href="{{ .URL }}" target="_blank">View Project</a>
+               <div class="project-img">
+                    {{ if eq (ext .ImagePath) ".svg" }}
+                    <img src="{{ .ImagePath }}" alt="project image" class="svg-image">
+                    {{ else }}
+                    <img src="{{ .ImagePath }}" alt="project image">
+                    {{ end }}
+               </div>
+               <div>
+                    <h3>{{ .Name }}</h3>
+                    <p>Made with:<span class="stack"> {{ .Stack }}</span></p>
+                    <p>{{ .Description }}</p>
+                    <a class="btn" href="{{ .URL }}" target="_blank">View Project</a>
+               </div>
           </div>
           {{ end }}
      </section>

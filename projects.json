@@ -1,15 +1,30 @@
 [
      {
          "Name": "Password Generator Web Service",
-         "Stack": "Golang",
+         "Stack": "Go",
          "Description": "This project is a web application built using the Gin framework in Go, designed to generate and serve random passwords.",
-         "URL": "https://github.com/rlanier-webdev/pwgenerator"
+         "URL": "https://github.com/rlanier-webdev/pwgenerator",
+         "Image": "/static/img/code-solid.svg"
      },
      {
          "Name": "City Poly Rivarly API",
-         "Stack": "Golang",
+         "Stack": "Go",
          "Description": "This API provides endpoints to retrieve information about the historic City-Poly game.",
-         "URL": "https://github.com/rlanier-webdev/RivalryAPIv2"
+         "URL": "https://github.com/rlanier-webdev/RivalryAPIv2",
+         "Image": "/static/img/football-solid.svg"
+     },
+     {
+         "Name": "SON Organization Website",
+         "Stack": "Wordpress",
+         "Description": "SON Organization's mission is to provide preventable resources to vulnerable youth & young adults in underserved communities affected by trauma.",
+         "URL": "https://son-organization.org/",
+         "Image": "/static/img/sonlogo.png"
+     },
+     {
+         "Name": "Portal Entertainment Website",
+         "Stack": "Wix",
+         "Description": "Portal Entertainment offers expert production services designed to effectively convey your message and drive results.",
+         "URL": "https://www.portalentertainmentproductions.com/",
+         "Image": "/static/img/portallogo.png"
      }
  ]
- 
