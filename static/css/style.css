@@ -253,6 +253,16 @@ footer {
         margin-left: 0;
         gap: 10px;
     }
+    section {
+        padding: 20px;
+    }
+    section.about {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    section.about p {
+        max-width: 100%;
+    }
     div.project-card {
         flex: 1 1 calc(100% - 20px); /* Stack cards on top of each other */
         margin: 10px 0;
