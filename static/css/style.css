@@ -166,6 +166,7 @@ a.btn:hover, button:hover, .course td a:hover {
 }
 .course {
     padding: 5px;
+    overflow-x: auto;
 }
 .course td a {
     text-decoration: none;
@@ -194,7 +195,7 @@ footer {
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
     body {
         font-size: 18px;
-        margin: 20px 50px; /* Adjust margins for better tablet view */
+        margin: 20px 50px;
     }
     main {
         padding: 2em;
@@ -251,6 +252,16 @@ footer {
     div.btn-group {
         margin-left: 0;
         gap: 10px;
+    }
+    section {
+        padding: 20px;
+    }
+    section.about {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    section.about p {
+        max-width: 100%;
     }
     div.project-card {
         flex: 1 1 calc(100% - 20px); /* Stack cards on top of each other */
