@@ -1,19 +1,16 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 18px;
-    margin: 0;
+    margin: 20px 350px;
     padding: 0;
-    background-color: #131313;
+    background-color: #000;
 }
-
 header {
-    padding: 1em 5em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: #fff;
     column-gap: 30px;
-    padding: 3em 8em;
+    margin-bottom: 20px; 
 }
 header nav a {
     margin: 0 1em;
@@ -22,11 +19,12 @@ header nav a {
 }
 h1.brand-text {
     font-size: 1.8rem;
+    color: #CCCCFF;
     line-height: 0;
 }
 h2.brand-text {
     font-size: 1.4rem;
-    color: #131313c2;
+    color: #fff;
     font-weight: 300;
 }
 div.btn-group {
@@ -48,68 +46,111 @@ img.logo {
     height: auto;
 }
 svg {
-    color: #131313;
+    color: #fff;
 }
 svg:hover {
-    color: #131313c2;
+    color: #FFFFCC;
 }
 
 main {
-    padding: 3em 8em;
     display: flex;
     flex-direction: row;
     gap: 100px;
     padding-bottom: 0;
 }
-main div.left {
-    width: 70%;
+main div.content-container {
+    width: 100%;
 }
-main div.right {
-    width: 30%;
+section {
+    border-radius: 10px;
+    background-color: #FFF;
+    height: auto;
+    margin-bottom: 64px;
+    padding: 30px 50px;
+}
+section.about {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 section.about p {
     line-height: 1.5;
+    max-width: 75%;
 }
-section.about, section.contact, section.skills, section.courses, section.projects {
-    background-color: #eeeeee;
+img.headshot {
+    height: 100%;
+    max-width: 100%;
+    border-radius: 8%;
+}
+section.skills {
     height: auto;
     margin-bottom: 64px;
-    padding: 30px 20px;
+    padding: 10 20px;
+    background-color: transparent;
+}
+section.skills h2 {
+    text-align: center;
+    color: #fff;
 }
 section.contact p svg {
     padding-right: 8px;
 }
 div.skill-container {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    /* flex-wrap: wrap; */
 }
 div.skill-container svg {
     padding: 10px;
-    flex-basis: 25%;
+    /* flex-basis: 25%; */
 }
 div.project {
-    padding-bottom: 40px;
     display: flex;
-    flex-direction: row;
-    gap: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-div.project div.project-img {
-    width: 200px;
-    height: 175px;
+div.project-card {
+    flex: 1 1 calc(25% - 20px); /* Adjusts width based on available space */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 20px;
+}
+/* Apply different background colors to each nth-child */
+.project:nth-child(2) .project-card {
+    background-color: #FFCCCC; /* Light Red */
+}
+
+.project:nth-child(3) .project-card {
+    background-color: #CCFFCC; /* Light Green */
+}
+
+.project:nth-child(4) .project-card {
+    background-color: #CCCCFF; /* Light Blue */
+}
+
+.project:nth-child(5) .project-card {
+    background-color: #FFFFCC; /* Light Yellow */
+}
+
+div.project-desc {
     display: flex;
-    justify-content: center;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
 }
-div.project div.project-img img {
-    width: 200px;
-    height: auto;
+div.project-desc h3 {
+    margin-bottom: -10px;
 }
-div.project div.project-img .svg-image {
-    min-width: 50%;
-    width: 85%;
-}
-a.btn, button {
+
+a.btn, .course td a {
     border: 1px solid #eeeeee;
     color: #eeeeee;
     text-decoration: none;
@@ -117,24 +158,33 @@ a.btn, button {
     border-radius: 5px;
     font-size: .9rem;
     background-color: #131313;
+    width: 25%;
+    align-self: center;
 }
-a.btn:hover, button:hover {
+a.btn:hover, button:hover, .course td a:hover {
     border: 1px solid #131313c2;
-}
-button{
-    cursor: pointer;
 }
 .course {
     padding: 5px;
 }
-.course img {
-    width: 75px;
-    height: auto;
-}
-.course p a {
+.course td a {
     text-decoration: none;
-    color: #131313;
+    color: #fff;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+
 footer {
     text-align: center;
     color: #eeeeee;
@@ -142,34 +192,27 @@ footer {
 
 /* Tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
-    /* Add your tablet-specific styles here */
     body {
         font-size: 18px;
+        margin: 20px 50px; /* Adjust margins for better tablet view */
     }
     main {
-        padding: 3em 5em;
+        padding: 2em;
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        gap: 50px;
         padding-bottom: 0;
-    }
-
-    main div.left {
-        width: 100%;
-    }
-    main div.right {
-        width: 100%;
     }
     header {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 20px; /* Added gap to space out items */
     }
     div.btn-group {
         margin-left: 0;
     }
     h1.brand-text {
         font-size: 1.6rem;
-        width: 300px;
         text-align: center;
     }
     h2.brand-text {
@@ -179,49 +222,38 @@ footer {
 
 /* Mobile devices */
 @media only screen and (max-width: 599px) {
-    /* Add your mobile-specific styles here */
     body {
         font-size: 16px;
+        margin: 10px 20px;
     }
     header {
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
     h1.brand-text {
-        font-size: 1.6rem;
-        width: 300px;
+        font-size: 1.4rem;
         text-align: center;
     }
     h2.brand-text {
         text-align: center;
     }
     main {
-        padding: 3em 3em;
+        padding: 2em;
         display: flex;
         flex-direction: column;
-        gap: 50px;
-        padding-bottom: 0;
-    }
-    main div.left {
-        min-width: 100%;
-    }
-    main div.right {
-        padding-top: 0;
-        width: 100%;
+        gap: 30px;
     }
     div.logo-container {
-        width: 85px;
-        height: 85px;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-    img.logo {
-        width: 100%;
-        height: 100%;
+        width: 70px;
+        height: 70px;
     }
     div.btn-group {
         margin-left: 0;
-        display: flex;
-        gap: 16px;
+        gap: 10px;
+    }
+    div.project-card {
+        flex: 1 1 calc(100% - 20px); /* Stack cards on top of each other */
+        margin: 10px 0;
     }
 }

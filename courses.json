@@ -1,0 +1,38 @@
+[
+     {
+     "Name": "Google Cloud Engineer",
+     "Platform": "ExamPro",
+     "CompletionDate": "In Progress",
+     "URL": ""
+     },
+     {
+     "Name": "Learn Bash Scripting",
+     "Platform": "Codecademy",
+     "CompletionDate": "9/2024",
+     "URL": "/static/docs/LearnBashScriptingCourse.pdf"
+     },
+     {
+     "Name": "Learn the Command Line Course",
+     "Platform": "Codecademy",
+     "CompletionDate": "8/2024",
+     "URL": "/static/docs/LearntheCommandLineCourse.pdf"
+     },
+     {
+     "Name": "Google Cloud Computing Foundations: Cloud Computing Fundamentals",
+     "Platform": "edX",
+     "CompletionDate": "8/2024",
+     "URL": "https://courses.edx.org/certificates/2b8e643925c84030b69c81ff9c026c83"
+     },
+     {
+     "Name": "Learn Go",
+     "Platform": "Codecademy",
+     "CompletionDate": "3/2024",
+     "URL": "/static/docs/LearnGo.pdf"
+     },
+     {
+     "Name": "Start the UX Design Process: Empathize, Define, and Ideate Foundations of User Experience (UX) Design",
+     "Platform": "Coursera",
+     "CompletionDate": "11/2023",
+     "URL": "https://coursera.org/share/62e5a5b5d4235db974a0717024944c3c"
+     }
+]

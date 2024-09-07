@@ -16,6 +16,12 @@ type Project struct {
 	URL         string `json:"url"`
 	ImagePath   string `json:"image"`
 }
+type Course struct {
+	Name        	string `json:"name"`
+	Platform       string `json:"platform"`
+	CompletionDate string `json:"completionDate"`
+	URL         	string `json:"url"`
+}
 
 func main() {
 	http.HandleFunc("/", homeHandler)
@@ -32,6 +38,7 @@ func main() {
 		log.Fatalf("could not start server: %s\n", err.Error())
 	}
 }
+
 // Custom function to extract the file extension
 func ext(path string) string {
 	return filepath.Ext(path)
@@ -58,18 +65,29 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error parsing template: %s\n", err.Error())
 		return
 	}
+
 	projects, err := loadProjects("projects.json")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		log.Printf("Error loading projects: %s\n", err.Error())
 		return
 	}
+
+	courses, err := loadCourses("courses.json")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Printf("Error loading courses: %s\n", err.Error())
+		return
+	}
+
 	data := struct {
 		Title    string
 		Projects []Project
+		Courses []Course
 	}{
 		Title:    "RaShunda Williams Dev Portfolio | Remote",
 		Projects: projects,
+		Courses: courses,
 	}
 	if err := tmpl.ExecuteTemplate(w, "base.html", data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -89,4 +107,18 @@ func loadProjects(filename string) ([]Project, error) {
 		return nil, err
 	}
 	return projects, nil
+}
+
+func loadCourses(filename string) ([]Course, error) {
+	file, err := os.Open(filename)
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
+
+	var courses []Course
+	if err := json.NewDecoder(file).Decode(&courses); err != nil {
+		return nil, err
+	}
+	return courses, nil
 }

@@ -1,41 +1,18 @@
 {{ define "content" }}
-<div class="left">
+<div class="content-container">
      <section class="about">
-          <h2>About Me</h2>
-          <p>As a customer support specialist transitioning to development, I'm passionate about using technology to address real-world problems. I have a solid foundation in HTML, CSS, and JavaScript, along with experience in Python and Django, and I'm dedicated to creating impactful web applications. I've also explored low and no-code tools to improve development efficiency. Currently, I'm expanding my skills with Go and thrive on continuous learning and pushing my capabilities.</p>
-     </section>
-
-     <section class="projects">
-          <h2>Recent Projects</h2>
-          {{ range .Projects }}
-          <div class="project">
-               <div class="project-img">
-                    {{ if eq (ext .ImagePath) ".svg" }}
-                    <img src="{{ .ImagePath }}" alt="project image" class="svg-image">
-                    {{ else }}
-                    <img src="{{ .ImagePath }}" alt="project image">
-                    {{ end }}
-               </div>
-               <div>
-                    <h3>{{ .Name }}</h3>
-                    <p>Made with:<span class="stack"> {{ .Stack }}</span></p>
-                    <p>{{ .Description }}</p>
-                    <a class="btn" href="{{ .URL }}" target="_blank">View Project</a>
-               </div>
+          <div>
+               <h2>About Me</h2>
+               <p>As a customer support specialist transitioning to development, I'm passionate about using technology to address real-world problems. I have a solid foundation in HTML, CSS, and JavaScript, along with experience in Python and Django, and I'm dedicated to creating impactful web applications. I've also explored low and no-code tools to improve development efficiency. Currently, I'm expanding my skills with Go and thrive on continuous learning and pushing my capabilities.</p>
           </div>
-          {{ end }}
-     </section>
-</div>
-
-<div class="right">
-     <section class="contact">
-          <p><i class="fa-solid fa-location-dot"></i>Saint Louis, MO</p>
-          <p><i class="fa-solid fa-envelope"></i>rashundalanier@gmail.com</p>
-          <!-- <p><i class="fa-solid fa-file-pdf"></i><a href="/static/docs/">Download Resume</a></p> -->
+          
+          <div>
+               <img class="headshot" src="/static/img/headshot.png" alt="RaShunda's Headshot">
+          </div>
      </section>
 
      <section class="skills">
-          <h2>Skills</h2>
+          <h2>Tech Stack</h2>
           <div class="skill-container">
                <i class="fa-brands fa-html5 fa-2xl" alt="HTML5"></i>
                <i class="fa-brands fa-css3-alt fa-2xl" alt="CSS"></i>
@@ -43,24 +20,57 @@
                <i class="fa-brands fa-golang fa-2xl" alt="Go"></i>
                <i class="fa-brands fa-python fa-2xl" alt="Python"></i>
                <i class="fa-brands fa-square-git fa-2xl" alt="Git"></i>
+               <i class="fa-brands fa-bootstrap fa-2xl" alt="Bootstrap"></i>
                <i class="fa-brands fa-wordpress fa-2xl" alt="Wordpress"></i>
           </div>
      </section>
 
+     <section class="projects">
+          <h2>Recent Projects</h2>
+          {{ range .Projects }}
+          <div class="project">
+               <div class="project-card">
+                    <div class="project-desc">
+                         <h3>{{ .Name }}</h3>
+                         <p>Made with:<span class="stack"> {{ .Stack }}</span></p>
+                         <p>{{ .Description }}</p>
+                         <a class="btn" href="{{ .URL }}" target="_blank">View Project</a>
+                    </div>
+               </div>
+          </div>
+          {{ end }}
+     </section>
+
      <section class="courses">
-          <h2>Courses & Certificates</h2>
+          <h2>Recent Courses</h2>
+          
           <div class="course">
-               <img src="/static/img/edx-logo-elm.svg" alt="edX Logo">
-               <p><a href="https://courses.edx.org/certificates/2b8e643925c84030b69c81ff9c026c83" target="_blank">Google Cloud Computing Foundations: Cloud Computing Fundamentals</a></p>
-          </div>
-          <div class="course">
-               <img src="/static/img/codecademy.jpg" alt="Codecademy Logo">
-               <p><a href="/static/docs/codecademy.pdf" target="_blank">Learn Go Course</a></p>
-          </div>
-          <div class="course">
-               <img src="https://about.coursera.org/static/blueC-65d0362f0b397e64f6a007c7eee7e090.svg" alt="Coursera Logo">
-               <p><a href="https://coursera.org/share/3db8427280fba365bbfb311c4e6fc531" target="_blank">Start the UX Design Process: Empathize, Define, and Ideate</a></p>
-               <p><a href="https://coursera.org/share/62e5a5b5d4235db974a0717024944c3c" target="_blank">Foundations of User Experience (UX) Design</a></p>
+               <table>
+                    <thead>
+                         <tr>
+                              <th>Name</th>
+                              <th>Platform</th>
+                              <th>Completion Date</th>
+                              <th>Certificate</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                         {{ range .Courses }}
+                         <tr>
+                              <td>{{.Name}}</td>
+                              <td>{{.Platform}}</td>
+                              <td>{{.CompletionDate}}</td>
+                              <td>
+                                   {{if .URL}}
+                                        <a href="{{.URL}}" target="_blank">View</a>
+                                   {{else}}
+                                   N/A
+                                   {{end}}
+                              </td>
+                         </tr>
+                         {{ end }}
+                    </tbody>
+               </table>
           </div>
      </section>
 </div>
