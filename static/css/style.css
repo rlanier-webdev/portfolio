@@ -263,6 +263,9 @@ footer {
     section.about p {
         max-width: 100%;
     }
+    img.headshot {
+        display: none;
+    }
     div.project-card {
         flex: 1 1 calc(100% - 20px); /* Stack cards on top of each other */
         margin: 10px 0;
