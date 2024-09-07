@@ -166,6 +166,7 @@ a.btn:hover, button:hover, .course td a:hover {
 }
 .course {
     padding: 5px;
+    overflow-x: auto;
 }
 .course td a {
     text-decoration: none;
