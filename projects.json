@@ -1,5 +1,12 @@
 [
      {
+         "Name": "Real Time Weather Dashboard",
+         "Stack": "Go",
+         "Description": "The Weather Dashboard app provides real-time weather updates for any location, offering a simple and user-friendly interface to check current conditions by ZIP code.",
+         "URL": "https://github.com/rlanier-webdev/go-weatherapp",
+         "Image": "/static/img/code-solid.svg"
+     },
+     {
          "Name": "Password Generator Web Service",
          "Stack": "Go",
          "Description": "This project is a web application built using the Gin framework in Go, designed to generate and serve random passwords.",
