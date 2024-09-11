@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 18px;
-    margin: 20px 100px;
+    margin: 20px 150px;
     padding: 0;
     background-color: #000;
 }
@@ -49,7 +49,7 @@ svg {
     color: #fff;
 }
 svg:hover {
-    color: #FFFFCC;
+    color: #CCCCFF;
 }
 
 main {
@@ -69,20 +69,17 @@ section {
     padding: 30px 50px;
 }
 section.about {
-    height: 400px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    gap: 75px;
 }
 section.about p {
     line-height: 1.5;
-    max-width: 75%;
 }
-img.headshot {
-    height: 100%;
-    max-width: 100%;
-    border-radius: 8%;
+section.about h2 {
+    width: 100%;
 }
 section.skills {
     height: auto;
@@ -100,12 +97,9 @@ section.contact p svg {
 div.skill-container {
     display: flex;
     justify-content: space-evenly;
-    
-    /* flex-wrap: wrap; */
 }
 div.skill-container svg {
     padding: 10px;
-    /* flex-basis: 25%; */
 }
 div.project {
     display: flex;
@@ -113,8 +107,8 @@ div.project {
     justify-content: space-around;
 }
 div.project-card {
-    flex: 1 1 calc(25% - 20px); /* Adjusts width based on available space */
-    background-color: #fff;
+    flex: 1 1 calc(25% - 20px); 
+    background-color: #CCCCFF; 
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
@@ -123,23 +117,6 @@ div.project-card {
     transition: transform 0.3s ease;
     margin: 20px;
 }
-/* Apply different background colors to each nth-child */
-.project:nth-child(2) .project-card {
-    background-color: #FFCCCC; /* Light Red */
-}
-
-.project:nth-child(3) .project-card {
-    background-color: #CCFFCC; /* Light Green */
-}
-
-.project:nth-child(4) .project-card {
-    background-color: #CCCCFF; /* Light Blue */
-}
-
-.project:nth-child(5) .project-card {
-    background-color: #FFFFCC; /* Light Yellow */
-}
-
 div.project-desc {
     display: flex;
     flex: 1 1 auto;
@@ -161,7 +138,7 @@ a.btn, .course td a {
     width: 25%;
     align-self: center;
 }
-a.btn:hover, button:hover, .course td a:hover {
+a.btn:hover, .course td a:hover {
     border: 1px solid #131313c2;
 }
 .course {
@@ -183,7 +160,7 @@ th, td {
     text-align: left;
 }
 th {
-    background-color: #f4f4f4;
+    background-color: #CCCCFF;
 }
 
 footer {
@@ -214,11 +191,18 @@ footer {
     }
     h1.brand-text {
         font-size: 1.6rem;
-        text-align: center;
     }
-    h2.brand-text {
-        text-align: center;
+
+    section.about {
+        height: 125%;
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
     }
+    section.about p {
+        line-height: 1.3;
+    }
+
 }
 
 /* Mobile devices */
@@ -258,16 +242,18 @@ footer {
     }
     section.about {
         height: auto;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
     }
     section.about p {
         max-width: 100%;
     }
-    img.headshot {
-        display: none;
-    }
     div.project-card {
         flex: 1 1 calc(100% - 20px); /* Stack cards on top of each other */
         margin: 10px 0;
+    }
+    div.skill-container {
+        flex-wrap: wrap;
     }
 }
