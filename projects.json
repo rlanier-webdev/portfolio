@@ -1,4 +1,32 @@
-[
+[   
+    {
+        "Name": "SON Organization Website",
+        "Stack": "Wordpress",
+        "Description": "SON Organization's mission is to provide preventable resources to vulnerable youth & young adults in underserved communities affected by trauma.",
+        "URL": "https://son-organization.org/",
+        "Image": "/static/img/sonlogo.png"
+    },
+    {
+        "Name": "Build Her Properties LLC Landing Page",
+        "Stack": "Wordpress",
+        "Description": "Build Her Properties LLCs mission is to provide excellent service in the property management, and home renovation sector.",
+        "URL": "https://buildherproperties.com/",
+        "Image": ""
+    },
+    {
+        "Name": "Pharaoh's Fitness Landing Page",
+        "Stack": "Wordpress",
+        "Description": "Pharaoh’s Fitness believes in unleashing the inner strength and potential of every individual.",
+        "URL": "https://ninothetrainer.net/",
+        "Image": ""
+    },
+    {
+        "Name": "Portal Entertainment Website",
+        "Stack": "Wix",
+        "Description": "Portal Entertainment offers expert production services designed to effectively convey your message and drive results.",
+        "URL": "https://www.portalentertainmentproductions.com/",
+        "Image": "/static/img/portallogo.png"
+    },
      {
          "Name": "Real Time Weather Dashboard",
          "Stack": "Go",
@@ -19,19 +47,5 @@
          "Description": "This API provides endpoints to retrieve information about the historic City-Poly game.",
          "URL": "https://github.com/rlanier-webdev/RivalryAPIv2",
          "Image": "/static/img/football-solid.svg"
-     },
-     {
-         "Name": "SON Organization Website",
-         "Stack": "Wordpress",
-         "Description": "SON Organization's mission is to provide preventable resources to vulnerable youth & young adults in underserved communities affected by trauma.",
-         "URL": "https://son-organization.org/",
-         "Image": "/static/img/sonlogo.png"
-     },
-     {
-         "Name": "Portal Entertainment Website",
-         "Stack": "Wix",
-         "Description": "Portal Entertainment offers expert production services designed to effectively convey your message and drive results.",
-         "URL": "https://www.portalentertainmentproductions.com/",
-         "Image": "/static/img/portallogo.png"
      }
  ]
