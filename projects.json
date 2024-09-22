@@ -1,5 +1,25 @@
 [   
     {
+        "Name": "Real Time Weather Dashboard",
+        "Stack": "Go",
+        "Description": "The Weather Dashboard app provides real-time weather updates for any location, offering a simple and user-friendly interface to check current conditions by ZIP code.",
+        "URL": "https://github.com/rlanier-webdev/go-weatherapp",
+        "Image": "/static/img/code-solid.svg"
+    },
+    {
+        "Name": "Password Generator Web Service",
+        "Stack": "Go",
+        "Description": "This project is a web application built using the Gin framework in Go, designed to generate and serve random passwords.",
+        "URL": "https://github.com/rlanier-webdev/pwgenerator",
+        "Image": "/static/img/code-solid.svg"
+    },
+    {
+        "Name": "City Poly Rivarly API",
+        "Stack": "Go",
+        "Description": "This API provides endpoints to retrieve information about the historic City-Poly game.",
+        "URL": "https://github.com/rlanier-webdev/RivalryAPIv2",
+        "Image": "/static/img/football-solid.svg"
+    },    {
         "Name": "SON Organization Website",
         "Stack": "Wordpress",
         "Description": "SON Organization's mission is to provide preventable resources to vulnerable youth & young adults in underserved communities affected by trauma.",
@@ -26,26 +46,5 @@
         "Description": "Portal Entertainment offers expert production services designed to effectively convey your message and drive results.",
         "URL": "https://www.portalentertainmentproductions.com/",
         "Image": "/static/img/portallogo.png"
-    },
-     {
-         "Name": "Real Time Weather Dashboard",
-         "Stack": "Go",
-         "Description": "The Weather Dashboard app provides real-time weather updates for any location, offering a simple and user-friendly interface to check current conditions by ZIP code.",
-         "URL": "https://github.com/rlanier-webdev/go-weatherapp",
-         "Image": "/static/img/code-solid.svg"
-     },
-     {
-         "Name": "Password Generator Web Service",
-         "Stack": "Go",
-         "Description": "This project is a web application built using the Gin framework in Go, designed to generate and serve random passwords.",
-         "URL": "https://github.com/rlanier-webdev/pwgenerator",
-         "Image": "/static/img/code-solid.svg"
-     },
-     {
-         "Name": "City Poly Rivarly API",
-         "Stack": "Go",
-         "Description": "This API provides endpoints to retrieve information about the historic City-Poly game.",
-         "URL": "https://github.com/rlanier-webdev/RivalryAPIv2",
-         "Image": "/static/img/football-solid.svg"
-     }
+    }
  ]
