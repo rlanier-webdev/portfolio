@@ -101,32 +101,39 @@ div.skill-container {
 div.skill-container svg {
     padding: 10px;
 }
+
 div.project {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 20px;
+    flex: 1 1 calc(33.33% - 40px);
 }
-div.project-card {
-    flex: 1 1 calc(25% - 20px); 
-    background-color: #CCCCFF; 
+.project-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.project-card {
+    flex: 1 1 calc(50% - 20px);
+    background-color: #CCCCFF;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 10px;
+    padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-    margin: 20px;
+    margin: 10px;
 }
 div.project-desc {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
     padding: 1rem;
+    gap: 10px;
 }
 div.project-desc h3 {
     margin-bottom: -10px;
 }
-
 a.btn, .course td a {
     border: 1px solid #eeeeee;
     color: #eeeeee;
@@ -169,7 +176,7 @@ footer {
 }
 
 /* Tablet devices */
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 770px) and (max-width: 1024px) {
     body {
         font-size: 18px;
         margin: 20px 50px;
@@ -206,7 +213,7 @@ footer {
 }
 
 /* Mobile devices */
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 769px) {
     body {
         font-size: 16px;
         margin: 10px 20px;
@@ -249,8 +256,12 @@ footer {
     section.about p {
         max-width: 100%;
     }
-    div.project-card {
-        flex: 1 1 calc(100% - 20px); /* Stack cards on top of each other */
+    .project-row {
+        flex-direction: column;
+    }
+
+    .project-card {
+        flex: 1 1 100%;
         margin: 10px 0;
     }
     div.skill-container {
