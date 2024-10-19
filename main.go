@@ -11,7 +11,6 @@ import (
 
 type Project struct {
 	Name        string `json:"name"`
-	Stack       string `json:"stack"`
 	Description string `json:"description"`
 	URL         string `json:"url"`
 	ImagePath   string `json:"image"`
@@ -21,6 +20,15 @@ type Course struct {
 	Platform       string `json:"platform"`
 	CompletionDate string `json:"completionDate"`
 	URL         	string `json:"url"`
+}
+
+// Mod function for modulus
+func mod(a, b int) int {
+	return a % b
+}
+
+func add(a, b int) int {
+	return a + b
 }
 
 func main() {
@@ -48,6 +56,8 @@ func parseTemplateFiles(filenames ...string) (*template.Template, error) {
 	// Create a FuncMap with your custom function
 	funcMap := template.FuncMap{
 		"ext": ext,
+		"mod": mod, // Register the mod function
+		"add": add, // Register the add function
 	}
 
 	paths := make([]string, len(filenames))

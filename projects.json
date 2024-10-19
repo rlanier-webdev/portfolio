@@ -1,50 +1,20 @@
 [   
     {
         "Name": "Real Time Weather Dashboard",
-        "Stack": "Go",
-        "Description": "The Weather Dashboard app provides real-time weather updates for any location, offering a simple and user-friendly interface to check current conditions by ZIP code.",
+        "Description": "A streamlined weather application that provides real-time updates for any location. Users can easily check current weather conditions by entering a ZIP code. Built with Go and hosted on Google Cloud Platform using Cloud Run, the app is optimized for speed, scalability, and simplicity, offering a clean, user-friendly interface for quick access to weather information.",
         "URL": "https://github.com/rlanier-webdev/go-weatherapp",
         "Image": "/static/img/code-solid.svg"
     },
     {
         "Name": "Password Generator Web Service",
-        "Stack": "Go",
-        "Description": "This project is a web application built using the Gin framework in Go, designed to generate and serve random passwords.",
+        "Description": "A web application built with the Gin framework in Go, designed to generate and serve secure random passwords. Hosted on Google Cloud Platform using Cloud Run, this application ensures fast performance and scalability, providing users with a simple and efficient tool to generate strong passwords on demand.",
         "URL": "https://github.com/rlanier-webdev/pwgenerator",
         "Image": "/static/img/code-solid.svg"
     },
     {
         "Name": "City Poly Rivarly API",
-        "Stack": "Go",
-        "Description": "This API provides endpoints to retrieve information about the historic City-Poly game.",
+        "Description": "An API built in Go that provides endpoints to retrieve detailed information about the historic City-Poly game. Hosted on Google Cloud Platform using Cloud Run, the project is integrated with Cloud Build for continuous deployment, connected to a GitHub repository for seamless updates and version control.",
         "URL": "https://github.com/rlanier-webdev/RivalryAPIv2",
         "Image": "/static/img/football-solid.svg"
-    },    {
-        "Name": "SON Organization Website",
-        "Stack": "Wordpress",
-        "Description": "SON Organization's mission is to provide preventable resources to vulnerable youth & young adults in underserved communities affected by trauma.",
-        "URL": "https://son-organization.org/",
-        "Image": "/static/img/sonlogo.png"
-    },
-    {
-        "Name": "Build Her Properties LLC Landing Page",
-        "Stack": "Wordpress",
-        "Description": "Build Her Properties LLCs mission is to provide excellent service in the property management, and home renovation sector.",
-        "URL": "https://buildherproperties.com/",
-        "Image": ""
-    },
-    {
-        "Name": "Pharaoh's Fitness Landing Page",
-        "Stack": "Wordpress",
-        "Description": "Pharaoh’s Fitness believes in unleashing the inner strength and potential of every individual.",
-        "URL": "https://ninothetrainer.net/",
-        "Image": ""
-    },
-    {
-        "Name": "Portal Entertainment Website",
-        "Stack": "Wix",
-        "Description": "Portal Entertainment offers expert production services designed to effectively convey your message and drive results.",
-        "URL": "https://www.portalentertainmentproductions.com/",
-        "Image": "/static/img/portallogo.png"
     }
- ]
+]
