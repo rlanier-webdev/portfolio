@@ -1,5 +1,11 @@
 [   
     {
+        "Name": "Todo App with Django",
+        "Description": "A simple Todo App built with Django where users can manage tasks, mark them as complete, and organize them into active and completed categories. This app provides a dashboard where users can interact with tasks, view active tasks, and move them to a completed section.",
+        "URL": "https://github.com/rlanier-webdev/django-todo",
+        "Image": "/static/img/code-solid.svg"
+    },
+    {
         "Name": "Real Time Weather Dashboard",
         "Description": "A streamlined weather application that provides real-time updates for any location. Users can easily check current weather conditions by entering a ZIP code. Built with Go and hosted on Google Cloud Platform using Cloud Run, the app is optimized for speed, scalability, and simplicity, offering a clean, user-friendly interface for quick access to weather information.",
         "URL": "https://github.com/rlanier-webdev/go-weatherapp",
